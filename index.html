@@ -225,7 +225,7 @@
             ]
         }
         
-        cartodb.createLayer(map, fourStates).addTo(map);
+        cartodb.createLayer(map, fourStates, { https: true }).addTo(map);
         
         var subTrails = {
             user_name: 'rogersm620',
@@ -238,7 +238,7 @@
             ]
         }
         
-        cartodb.createLayer(map, subTrails).addTo(map)
+        cartodb.createLayer(map, subTrails, { https: true }).addTo(map)
             .on('done', function(layer) {
             cartodb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), ['name', 'seg_start', 'seg_end']); 
             layer.setInteraction(true);
@@ -277,7 +277,7 @@
             ]
         }
         
-        cartodb.createLayer(map, rail).addTo(map);
+        cartodb.createLayer(map, rail, { https: true }).addTo(map);
 
             
         
